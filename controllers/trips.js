@@ -77,14 +77,17 @@ res.render('trips/edit.ejs', {trip, userId: currentUser._id});
   })
 
   router.put('/:tripId', async (req,res) =>{
+    console.log(req.body)
     try {
         const currentUser = await User.findById(req.session.user._id);
         const trip = currentUser.trips.id(req.params.tripId);
         trip.title= req.body.title;
         trip.destination=req.body.destination;
-        trip.activity=req.body.activity;
+        trip.activities=req.body.activities;
         await currentUser.save();
+        await trip.save();
 res.redirect(`/users/${currentUser._id}/trips/${trip._id}`)
+
     } catch (error) {
 console.log(error);
 res.redirect('/');
