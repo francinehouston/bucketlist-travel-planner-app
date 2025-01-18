@@ -1,0 +1,21 @@
+<nav>
+    <% if(user) { %>
+
+        <div class="navbar">
+            <h1 id="nav-header">BucketList</h1>
+
+            <div class="nav-links">
+                <a class="authlink" href="/users/<%=user._id%>/trips">Your Trips</a>
+                <a class="authlink" href="/auth/sign-out">Sign Out</a>
+            </div>
+        </div>
+        <% } else { %>
+            <div class="navbar">
+                <h1 id="nav-header">BucketList</h1>
+                <div class="nav-links">
+                    <a class="auth-link" href="/auth/sign-in">Sign In</a>
+                    <a class="auth-link" href="/auth/sign-up">Sign Up</a>
+                </div>
+            </div>
+            <% } %>
+</nav>

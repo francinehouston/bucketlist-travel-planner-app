@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <title>Your Trips</title>
+    
+</head>
+<body>
+    <%- include('../partials/_navbar.ejs') %>
+    <div class="all-apps-body">
+        <div class="all-apps-header">
+    <h1>Your Trips</h1>
+    <a class = "add-app-link" href="/users/<%= user._id %>/trips/new">Add a new trip</a>
+</div>
+    <% if (trips && trips.length > 0) { %>
+        <ul>
+            <% trips.forEach(trip => { %>
+                <li>
+                    <a href="/users/<%= user._id %>/trips/<%= trip._id %>">
+                        <%= trip.destination %> - View
+                    </a>
+                </li>
+            <% }) %>
+        </ul>
+    <% } else { %>
+        <p>No trips available. Start planning now!</p>
+    <% } %>
+    
+</div>
+</body>
+</html>

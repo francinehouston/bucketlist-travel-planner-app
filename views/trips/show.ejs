@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>
+        <% trip.title %>
+    </title>
+    <link rel="stylesheet" href="/stylesheets/show.css" />
+</head>
+
+<body>
+    <%- include('../partials/_navbar.ejs') %>
+        <div class ="show-body">
+
+
+            <h1> <%= trip.title %></h1>
+
+
+            <div class="show-sidebar">   
+            <p>
+                <%= trip.destination %>
+            </p>
+        </div>
+        <div class="show-notes">
+            <p><strong>Start Date:</strong>
+                <%= trip.startDate %>
+            </p>
+            <p><strong>End Date:</strong>
+                <%= trip.endDate%>
+            </p>
+    
+            <h1>
+                <%= trip.activities %>
+            </h1>
+        </div>
+   
+       
+
+           
+    <div class="show-actions">
+<a href="/users/<%= user._id %>/trips/<%= trip._id %>/edit">Edit this Trip</a>
+
+<form action="/users/<%= user._id %>/trips/<%= trip._id %>?_method=DELETE" method="POST">
+    <button type="submit">Delete this trip</button>
+</form> 
+</div>
+
+
+</body>
+
+</html>

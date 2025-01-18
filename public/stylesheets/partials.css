@@ -1,0 +1,30 @@
+
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    max-width: 100vw;
+    padding: 5px 20px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  #nav-header {
+    color: lavender;
+    size: 1em !important;
+    margin: 8px 0;
+  }
+  
+  .authlink {
+    text-decoration: none;
+    margin: 0 15px;
+    color: #C9E8EC;
+    font-weight: bold;
+    padding: 8px 0;
+  }
+
+  
+  .authlink:hover {
+    color: #13011B;
+  }
+  

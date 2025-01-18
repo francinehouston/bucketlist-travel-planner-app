@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add A New Trip</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+</head>
+<body>
+    <%- include('../partials/_navbar.ejs') %>
+    <h1 class="new trip" >Add A New Trip</h1>
+    <div class="new-body">
+<form action="/users/<%= user._id %>/trips" method="POST">
+    <label for="title">Title:</label>
+    <input type="text" id="title" name="title" required>
+
+    <label for="destination">Destination</label>
+    <input type="destination" id="destination" name="destination" required>
+    <label for="startDate">Start Date:</label>
+        <input type="date" id="startDate" name="startDate" required>
+
+        <label for="endDate">End Date:</label>
+        <input type="date" id="endDate" name="endDate" required>
+
+        <label for="activities">Activities:</label>
+        <textarea id="activities" name="activities"></textarea>
+
+        <button type="submit">Submit</button>
+      
+
+
+    </form>
+
+
+       
+    
+  
+
+    </div>
+</body>
+</html> 
