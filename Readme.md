@@ -8,7 +8,7 @@ Trello board:
 https://trello.com/b/cF8lLq2M/bucket-list-travel-planner
  
 
-# Getting Started:
+# Getting Started:https://git.heroku.com/bucketlist-travel-planner-app.git
 
 # Attributions: 
 YouTube videos, stackoverflow, chaptGPT for debugging
